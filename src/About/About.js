@@ -103,7 +103,7 @@ export default function About() {
             <div className={classes.schoolDetail}>
               <h3>{detail.grade}</h3>
               <div className={classes.h1}></div>
-              <div>SCORE : {detail.score}</div>
+              <div>Score : {detail.score}</div>
               <div>INSTITUTION : {detail.name}</div>
               <div>
                 PLACE : {detail.city}, {detail.state}
