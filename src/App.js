@@ -1,45 +1,47 @@
 import "./App.css";
-import About from "./About/About";
-import HomePage from "./Home/HomePage";
 import { Link, Outlet } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useMemo } from "react/cjs/react.development";
 
 function App() {
   const [currentItem, setCurrentItem] = useState(0);
-  const navItems = [
-    {
-      id: 0,
-      name: "Home",
-      path: "/",
-    },
-    {
-      id: 1,
-      name: "About",
-      path: "/about",
-    },
-    {
-      id: 2,
-      name: "Resume",
-      path: "/resume",
-    },
-    {
-      id: 3,
-      name: "Portfolio",
-      path: "/portfolio",
-    },
-    {
-      id: 4,
-      name: "Contact",
-      path: "/contact",
-    },
-  ];
+  const navItems = useMemo(
+    () => [
+      {
+        id: 0,
+        name: "Home",
+        path: "/",
+      },
+      {
+        id: 1,
+        name: "About",
+        path: "/about",
+      },
+      {
+        id: 2,
+        name: "Resume",
+        path: "/resume",
+      },
+      {
+        id: 3,
+        name: "Portfolio",
+        path: "/portfolio",
+      },
+      {
+        id: 4,
+        name: "Contact",
+        path: "/contact",
+      },
+    ],
+    []
+  );
 
   useEffect(() => {
     let current = navItems.filter(
       (itm) => window.location.pathname === itm.path
     );
     setCurrentItem(current[0].id);
-  });
+  }, [navItems]);
 
   return (
     <div>
@@ -60,7 +62,7 @@ function App() {
               <Link
                 to={navItem.path}
                 className={
-                  navItem.id == currentItem ? "navItemActive" : "navItem"
+                  navItem.id === currentItem ? "navItemActive" : "navItem"
                 }
                 onClick={() => setCurrentItem(navItem.id)}
               >

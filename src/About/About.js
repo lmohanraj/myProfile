@@ -73,7 +73,7 @@ export default function About() {
     <div className={classes.educationDetails}>
       <div>
         <header>
-          <h4>ME?</h4> <h6></h6>
+          <h4>ME?</h4> <div className={classes.h6}></div>
         </header>
         <h2>LET'S GET TO KNOW ME</h2>
         <h2 className={classes.title}>Web Developer</h2>
@@ -102,7 +102,7 @@ export default function About() {
           return (
             <div className={classes.schoolDetail}>
               <h3>{detail.grade}</h3>
-              <h1></h1>
+              <div className={classes.h1}></div>
               <div>SCORE : {detail.score}</div>
               <div>INSTITUTION : {detail.name}</div>
               <div>
