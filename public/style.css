@@ -1,0 +1,14 @@
+body {
+  margin: 0px;
+  height: 500px;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+  background: url(https://images.unsplash.com/photo-1509773896068-7fd415d91e2e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max)
+    no-repeat;
+  /* background: url(https://wallpaperaccess.com/full/5651980.jpg) no-repeat; */
+  background-size: cover;
+  /* overflow-y: scroll; */
+  font-family: "Raleway", sans-serif;
+}

@@ -1,0 +1,68 @@
+.aboutMeSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  padding: 2vw;
+  width: 80%;
+}
+
+h1 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+p {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-size: 2rem;
+}
+
+.myDesc {
+  font-size: 1.8rem;
+  color: lightgray;
+}
+
+.myPhoto {
+  width: max(13vw, 200px);
+  height: max(13vw, 200px);
+  border-radius: 50%;
+  padding: 5vw;
+}
+
+.role {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 5px;
+  color: #18d26e;
+  /* color: #00a4d1; */
+}
+
+.icons {
+  height: 30px;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.socialLinks {
+  display: flex;
+  margin: 20px;
+  margin-left: 0px;
+  gap: 30px;
+}
+
+a {
+  padding-left: 0px;
+}
