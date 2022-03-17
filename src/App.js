@@ -1,7 +1,7 @@
 import "./App.css";
 import { Link, Outlet } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useMemo } from "react/cjs/react.development";
+import { useMemo } from "react";
 
 function App() {
   const [currentItem, setCurrentItem] = useState(0);
@@ -19,13 +19,13 @@ function App() {
       },
       {
         id: 2,
-        name: "Resume",
-        path: "/resume",
+        name: "Projects",
+        path: "/projects",
       },
       {
         id: 3,
-        name: "Portfolio",
-        path: "/portfolio",
+        name: "Achievements",
+        path: "/achievements",
       },
       {
         id: 4,

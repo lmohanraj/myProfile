@@ -5,3 +5,6 @@ export { default as jsIcon } from "./Icons/script.png";
 export { default as bootstrap } from "./Icons/strap.png";
 export { default as nodejs } from "./Icons/node.png";
 export { default as mongodb } from "./Icons/db.png";
+export { default as sportIcon } from "./Icons/sport.svg";
+export { default as travelIcon } from "./Icons/travel.svg";
+export { default as musicIcon } from "./Icons/music.svg";

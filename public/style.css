@@ -1,6 +1,6 @@
 body {
   margin: 0px;
-  height: 500px;
+  /* height: 100vh; */
   width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -9,6 +9,6 @@ body {
     no-repeat;
   /* background: url(https://wallpaperaccess.com/full/5651980.jpg) no-repeat; */
   background-size: cover;
-  /* overflow-y: scroll; */
+  overflow-y: auto;
   font-family: "Raleway", sans-serif;
 }

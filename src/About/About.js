@@ -6,8 +6,103 @@ import {
   bootstrap,
   nodejs,
   mongodb,
+  sportIcon,
+  travelIcon,
+  musicIcon,
 } from ".";
 import classes from "./About.module.css";
+
+function Section1() {
+  return (
+    <>
+      <div>
+        <header>
+          <h4>ME?</h4> <div className={classes.h6}></div>
+        </header>
+        <h2>LET'S GET TO KNOW ME</h2>
+        <h2 className={classes.title}>Web Developer</h2>
+        <p className={classes.para}>
+          A sports enthusiast and a web developer based in Karur, India
+        </p>
+      </div>
+      <div className={classes.resumeDownload}>
+        <h2 className={classes.checkTitle}>CHECK MY RESUME </h2>
+        <h2 className={classes.arrow}>{`>`}</h2>
+        <h3 className={classes.download}> CLICK HERE TO DOWNLOAD</h3>
+      </div>
+    </>
+  );
+}
+
+function Skills(props) {
+  return (
+    <div className={classes.allSkills}>
+      {props.skills.map((skill) => {
+        return (
+          <section className={classes.skill}>
+            <img
+              className={classes.skillsIcon}
+              src={skill.src}
+              alt={skill.name}
+            />
+            <div
+              style={{
+                textAlign: "center",
+              }}
+            >
+              {skill.name}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
+function Education(props) {
+  return (
+    <section className={classes.sclDetails}>
+      {props.details.map((detail) => {
+        return (
+          <div className={classes.schoolDetail}>
+            <h3>{detail.grade}</h3>
+            <div className={classes.h1}></div>
+            <div>Score : {detail.score}</div>
+            <div>INSTITUTION : {detail.name}</div>
+            <div>
+              PLACE : {detail.city}, {detail.state}
+            </div>
+          </div>
+        );
+      })}
+    </section>
+  );
+}
+
+function Interests(props) {
+  return (
+    <div className={classes.allInterests}>
+      {props.interests.map((interest) => {
+        return (
+          <section className={classes.interest}>
+            <img
+              className={classes.interestIcon}
+              src={interest.src}
+              alt={interest.name}
+            />
+            <div
+              style={{
+                textAlign: "center",
+              }}
+            >
+              {interest.name}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
 
 export default function About() {
   const details = [
@@ -69,49 +164,30 @@ export default function About() {
       src: mongodb,
     },
   ];
+
+  const interests = [
+    {
+      name: "Sport",
+      src: sportIcon,
+    },
+    {
+      name: "Travel",
+      src: travelIcon,
+    },
+    {
+      name: "Music",
+      src: musicIcon,
+    },
+  ];
   return (
     <div className={classes.educationDetails}>
-      <div>
-        <header>
-          <h4>ME?</h4> <div className={classes.h6}></div>
-        </header>
-        <h2>LET'S GET TO KNOW ME</h2>
-        <h2 className={classes.title}>Web Developer</h2>
-        <p className={classes.para}>
-          A sports enthusiast and a web developer based in Karur, India
-        </p>
-      </div>
-      <h2 className={classes.title}>Skills</h2>
-      <div className={classes.allSkills}>
-        {skills.map((skill) => {
-          return (
-            <section className={classes.skill}>
-              <img
-                className={classes.skillsIcon}
-                src={skill.src}
-                alt={skill.name}
-              />
-              <div style={{ textAlign: "center" }}>{skill.name}</div>
-            </section>
-          );
-        })}
-      </div>
+      <Section1></Section1>
+      <h2 className={classes.title}>Technical Skills</h2>
+      <Skills skills={skills}></Skills>
       <h2 className={classes.title}>Education</h2>
-      <section className={classes.sclDetails}>
-        {details.map((detail) => {
-          return (
-            <div className={classes.schoolDetail}>
-              <h3>{detail.grade}</h3>
-              <div className={classes.h1}></div>
-              <div>Score : {detail.score}</div>
-              <div>INSTITUTION : {detail.name}</div>
-              <div>
-                PLACE : {detail.city}, {detail.state}
-              </div>
-            </div>
-          );
-        })}
-      </section>
+      <Education details={details}></Education>
+      <h2 className={classes.title}>Other Interests</h2>
+      <Interests interests={interests}></Interests>
     </div>
   );
 }

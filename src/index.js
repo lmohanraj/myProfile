@@ -13,8 +13,8 @@ ReactDOM.render(
         <Route path="/" element={<App />}>
           <Route path="" element={<HomePage />} />
           <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<HomePage />} />
-          <Route path="/portfolio" element={<HomePage />} />
+          <Route path="/projects" element={<HomePage />} />
+          <Route path="/achievements" element={<HomePage />} />
           <Route path="/contact" element={<HomePage />} />
         </Route>
       </Routes>
