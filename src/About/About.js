@@ -182,10 +182,45 @@ export default function About() {
   return (
     <div className={classes.educationDetails}>
       <Section1></Section1>
-      <h2 className={classes.title}>Technical Skills</h2>
-      <Skills skills={skills}></Skills>
       <h2 className={classes.title}>Education</h2>
       <Education details={details}></Education>
+      <h2 className={classes.title}>Technical Skills</h2>
+      <Skills skills={skills}></Skills>
+      <h2 className={classes.title}>Work Experience</h2>
+      <div className={classes.workDetail}>
+        <section className={classes.workExp}>
+          <h4 className={classes.company}>Tata Consultancy Services</h4>
+          <div className={classes.titleDuration}>
+            <h4 className={classes.jobTitle}>Assistant System Engineer</h4>
+            <span className={classes.duration}>(Jan, 2020 - Jul, 2021)</span>
+          </div>
+          <ul>
+            <li> Manual Testing of applications</li>
+            <li> Experience working in an Agile team</li>
+            <li> Responsible for performing regression and functional tests</li>
+          </ul>
+          <span className={classes.dotGreen}></span>
+        </section>
+        <section className={classes.workExp}>
+          <h4 className={classes.company}>Triofi Technologies Pvt Ltd</h4>
+          <div className={classes.titleDuration}>
+            <h4 className={classes.jobTitle}>Front End Developer - Intern</h4>
+            <span className={classes.duration}>(Nov, 2021 - Feb, 2022)</span>
+          </div>
+          <ul>
+            <li>
+              Developing responsive web applications using HTML 5, CSS 3, React,
+              Redux and bootstrap techniques
+            </li>
+            <li> Working with VS Code, Git and GitLab</li>
+            <li>
+              Understanding the client requirements and implementing it and
+              adding features
+            </li>
+          </ul>
+          <span className={classes.dotGreen}></span>
+        </section>
+      </div>
       <h2 className={classes.title}>Other Interests</h2>
       <Interests interests={interests}></Interests>
     </div>

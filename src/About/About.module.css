@@ -82,7 +82,7 @@ h3 {
   flex-wrap: wrap;
   align-items: center;
   gap: 100px;
-  margin: 30px 0;
+  margin: 30px 0 4vw 0;
   padding-left: 50px;
 }
 
@@ -121,4 +121,65 @@ h3 {
   background: rgba(255, 255, 255, 0.5);
   padding: 10px;
   border-radius: 25%;
+}
+
+.workDetail {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 5vw;
+}
+
+.workExp {
+  border-left: 2px solid gray;
+  padding-left: 2vw;
+  position: relative;
+  margin: 2vw 0;
+  height: max-content;
+}
+
+.dotGreen {
+  position: absolute;
+  top: 0px;
+  left: -8px;
+  height: 15px;
+  width: 15px;
+  background-color: #18d26e;
+  border-radius: 50%;
+}
+
+.company,
+.duration {
+  /* color: #18d26e; */
+  text-transform: uppercase;
+  /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
+}
+
+.titleDuration {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 1vw;
+}
+
+.duration {
+  /* color: darkgray; */
+  font-weight: lighter;
+  color: #18d26e;
+}
+
+.jobTitle {
+  background: rgba(255, 255, 255, 0.3);
+  color: black;
+  width: max-content;
+  padding: 0.75vw 1.5vw;
+  border-radius: 5px;
+}
+
+li {
+  max-width: 400px;
+}
+
+ul {
+  line-height: 2;
 }
